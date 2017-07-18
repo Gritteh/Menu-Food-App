@@ -89,11 +89,12 @@ header {
   z-index: 6;
   color: #af9a50;
 	height: 17vh;
+	padding: 4vh 4vw;
 	/*padding: 20px 30px;*/
 }
 .upper-header {
   overflow: auto;
-	padding:
+	/*padding:*/
 }
 .menu-icon {
   float: left;
@@ -111,7 +112,7 @@ header {
 }
 .lower-header {
   overflow: auto;
-  margin-top: 4vh;
+  margin-top: 3vh;
 }
 .items {
   float: left;
