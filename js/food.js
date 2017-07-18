@@ -7,67 +7,86 @@ $(document).ready(function() {
   var espressoLine = $(".espresso-line");
   var done = $(".done");
 
+  var sweetLine = $(".sweet-line");
+  var sweetHidden = $(".sweet-hidden");
+
+  var foodDone = $(".food-hidden");
+  var foodHidden = $(".food-hidden");
+  var foodLine = $(".food-line");
+
+  var drinkDone = $(".food-hidden");
+
+  var drinkHidden = $(".drink-hidden");
+  var drinkLine = $(".drink-line");
+
   var bigos = 0;
   var bigo = 0;
 
 
   coffee.click(function() {
     var yn = 0;
-    if (bigo === 0) {
 
 
-      coffee.animate({
-        height: "40vh",
-      }, 500);
-      sweet.animate({
-        height: "15vh",
-        top: "55vh",
-        paddingTop: "5vh"
-      }, 500);
-      food.animate({
-        height: "15vh",
-        top: "69vh",
-        paddingTop: "5vh"
-      }, 500);
-      drink.animate({
-        height: "15vh",
-        top: "83vh",
-        paddingTop: "5vh"
-      }, 500);
 
-      hidden.css("display", "inline");
-      espressoLine.css("display", "block");
-      bigo = 1;
-    } else if (bigo === 1) {
-      bigo = 0;
-    }
+    coffee.animate({
+      height: "40vh",
+    }, 500);
+    sweet.animate({
+      height: "15vh",
+      top: "55vh",
+      paddingTop: "5vh"
+    }, 500);
+    food.animate({
+      height: "15vh",
+      top: "69vh",
+      paddingTop: "5vh"
+    }, 500);
+    drink.animate({
+      height: "15vh",
+      top: "83vh",
+      paddingTop: "5vh"
+    }, 500);
+
+    sweetHidden.css("display", "none");
+    foodHidden.css("display", "none");
+    drinkHidden.css("display", "none");
+
+
+    hidden.css("display", "inline");
+    espressoLine.css("display", "block");
+    bigo = 1;
+
   });
 
 
 
 
   done.click(function () {
-      coffee.animate({
-        height: "20vh",
-        top: "16vh",
-        paddingTop: "8vh"
-      }, 500);
-      sweet.animate({
-        height: "20vh",
-        top: "35vh",
-        paddingTop: "8vh"
-      }, 500);
-      food.animate({
-        height: "20vh",
-        top: "54vh",
-        paddingTop: "8vh"
-      }, 500);
-      drink.animate({
-        height: "20vh",
-        top: "73vh",
-        paddingTop: "8vh"
-      }, 500);
-      hidden.css("display", "none");
+    coffee.animate({
+      height: "20vh",
+      top: "16vh",
+      paddingTop: "8vh"
+    }, 500);
+    sweet.animate({
+      height: "20vh",
+      top: "35vh",
+      paddingTop: "8vh"
+    }, 500);
+    food.animate({
+      height: "20vh",
+      top: "54vh",
+      paddingTop: "8vh"
+    }, 500);
+    drink.animate({
+      height: "20vh",
+      top: "73vh",
+      paddingTop: "8vh"
+    }, 500);
+
+    hidden.css("display", "none");
+    sweetHidden.css("display", "none");
+    foodHidden.css("display", "none");
+    drinkHidden.css("display", "none");
   });
 
   // + and - function for COFFEE
@@ -89,6 +108,7 @@ $(document).ready(function() {
   var cappuccinoNum = $(".cappuccino-count");
 cappuccinoPlus.click(function() {
   cappuccinoCount++;
+  // console.log(cappuccinoCount);
   cappuccinoNum.html(cappuccinoCount);
 });
 cappuccinoMinus.click(function() {
@@ -101,48 +121,95 @@ var lattePlus = $(".latte-plus");
 var latteMinus = $(".latte-minus");
 var latteNum = $(".latte-count");
 lattePlus.click(function() {
-latteCount++;
-latteNum.html(latteCount);
+  latteCount++;
+  latteNum.html(latteCount);
 });
 latteMinus.click(function() {
-latteCount--;
-latteNum.html(latteCount);
+  latteCount--;
+  latteNum.html(latteCount);
 });
 // END
 // sweet expand:
 var sweetDone = $(".sweet-hidden");
 sweet.click(function() {
   sweetCount = 0;
-  if (sweetCount === 0) {
-    sweet.animate({
-      height: "40vh",
-      top: "30vh"
 
-    }, 500);
-    coffee.animate({
-      height: "15vh",
-      paddingTop: "6vh"
-    }, 500);
-    sweetCount = 1;
-    food.animate({
-      height: "15vh",
-      top: "69vh",
-      paddingTop: "6vh"
-    }, 500);
-    drink.animate({
-      height: "15vh",
-      top: "83vh",
-      paddingTop: "6vh"
-    }, 500);
-    hidden.css("display", "none");
-    sweetDone.css("display", "inline");
+  sweet.animate({
+    height: "40vh",
+    top: "30vh"
 
-  }
+  }, 500);
+  coffee.animate({
+    height: "15vh",
+    paddingTop: "6vh"
+  }, 500);
+  sweetCount = 1;
+  food.animate({
+    height: "15vh",
+    top: "69vh",
+    paddingTop: "6vh"
+  }, 500);
+  drink.animate({
+    height: "15vh",
+    top: "83vh",
+    paddingTop: "6vh"
+  }, 500);
+  hidden.css("display", "none");
+  sweetDone.css("display", "inline");
+  foodHidden.css("display", "none");
+  drinkHidden.css("display", "none");
+
+
+  // var sweetLine = $(".sweet-line");
+  // var sweetHidden = $(".sweet-hidden");
+  sweetHidden.css("display", "inline");
+  sweetLine.css("display", "block");
+
 
 });
+// SWEET - and + function
+var chocolateCount = 0;
+var chocolatePlus = $(".chocolate-plus");
+var chocolateMinus = $(".chocolate-minus");
+var chocolateNum = $(".chocolate-count");
+chocolatePlus.click(function() {
+  chocolateCount++;
+  chocolateNum.html(chocolateCount);
+});
+chocolateMinus.click(function() {
+  chocolateCount--;
+  chocolateNum.html(chocolateCount);
+});
+
+var hariboCount = 0;
+var hariboPlus = $(".haribo-plus");
+var hariboMinus = $(".haribo-minus");
+var hariboNum = $(".haribo-count");
+hariboPlus.click(function() {
+hariboCount++;
+// console.log(cappuccinoCount);
+hariboNum.html(hariboCount);
+});
+hariboMinus.click(function() {
+hariboCount--;
+hariboNum.html(hariboCount);
+});
+
+var marsCount = 0;
+var marsPlus = $(".mars-plus");
+var marsMinus = $(".mars-minus");
+var marsNum = $(".mars-count");
+marsPlus.click(function() {
+marsCount++;
+marsNum.html(marsCount);
+});
+marsMinus.click(function() {
+marsCount--;
+marsNum.html(marsCount);
+});
+// END
 
 // food expand:
-var foodDone = $(".food-hidden");
 food.click(function() {
   food.animate({
     height: "40vh",
@@ -163,12 +230,58 @@ food.click(function() {
     top: "83vh",
     paddingTop: "6vh"
   }, 500);
+  // var foodDone = $(".food-hidden");
+  // var foodLine = $(".food-line");
   hidden.css("display", "none");
-  foodDone.css("display", "inline");
+  sweetHidden.css("display", "none");
+  drinkHidden.css("display", "none");
 
 
-
+  foodHidden.css("display", "inline");
+  foodLine.css("display", "block");
 });
+
+// food + and - function
+var soupCount = 0;
+var soupPlus = $(".soup-plus");
+var soupMinus = $(".soup-minus");
+var soupNum = $(".soup-count");
+soupPlus.click(function() {
+  soupCount++;
+  soupNum.html(soupCount);
+});
+soupMinus.click(function() {
+  soupCount--;
+  soupNum.html(soupCount);
+});
+var englishCount = 0;
+var englishPlus = $(".english-plus");
+var englishMinus = $(".english-minus");
+var englishNum = $(".english-count");
+englishPlus.click(function() {
+englishCount++;
+// console.log(cappuccinoCount);
+englishNum.html(englishCount);
+});
+englishMinus.click(function() {
+englishCount--;
+englishNum.html(englishCount);
+});
+
+var spaghettiCount = 0;
+var spaghettiPlus = $(".spaghetti-plus");
+var spaghettiMinus = $(".spaghetti-minus");
+var spaghettiNum = $(".spaghetti-count");
+spaghettiPlus.click(function() {
+spaghettiCount++;
+spaghettiNum.html(spaghettiCount);
+});
+spaghettiMinus.click(function() {
+spaghettiCount--;
+spaghettiNum.html(spaghettiCount);
+});
+// END
+
 // Drink expand:
 var drinkDone = $(".drink-hidden");
 drink.click(function() {
@@ -192,8 +305,72 @@ drink.click(function() {
     top: "58vh"
   }, 500);
   hidden.css("display", "none");
-  drinkDone.css("display", "inline");
+  sweetHidden.css("display", "none");
+  foodHidden.css("display", "none");
+
+  drinkHidden.css("display", "inline");
+  drinkLine.css("display", "block");
+
 });
+
+// Drink + and - function
+var lemonadeCount = 0;
+var lemonadePlus = $(".lemonade-plus");
+var lemonadeMinus = $(".lemonade-minus");
+var lemonadeNum = $(".lemonade-count");
+lemonadePlus.click(function() {
+  lemonadeCount++;
+  lemonadeNum.html(lemonadeCount);
+});
+lemonadeMinus.click(function() {
+  lemonadeCount--;
+  lemonadeNum.html(lemonadeCount);
+});
+var juiceCount = 0;
+var juicePlus = $(".juice-plus");
+var juiceMinus = $(".juice-minus");
+var juiceNum = $(".juice-count");
+juicePlus.click(function() {
+juiceCount++;
+// console.log(cappuccinoCount);
+juiceNum.html(juiceCount);
+});
+juiceMinus.click(function() {
+juiceCount--;
+juiceNum.html(juiceCount);
+});
+
+var wineCount = 0;
+var winePlus = $(".wine-plus");
+var wineMinus = $(".wine-minus");
+var wineNum = $(".wine-count");
+winePlus.click(function() {
+wineCount++;
+wineNum.html(wineCount);
+});
+wineMinus.click(function() {
+wineCount--;
+wineNum.html(wineCount);
+});
+// END
+
+// items counter total :
+var counter = $(".items");
+// cappuccinoNum
+// latteNum
+// espressoNum
+var totalNum;
+
+var button = $("button");
+button.click(function() {
+  totalNum = cappuccinoCount + latteCount + espressoCount + chocolateCount + hariboCount + marsCount + soupCount + englishCount + spaghettiCount + lemonadeCount + juiceCount + wineCount;
+  counter.html(totalNum + " Items");
+});
+
+
+
+
+
 
 // doc ready end below
 });

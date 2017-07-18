@@ -66,6 +66,15 @@ body {
 .hidden {
   display: none;
 }
+.sweet-hidden {
+	display: none;
+}
+.food-hidden {
+	display: none;
+}
+.drink-hidden {
+	display: none;
+}
 .standard {
   width: 100%;
   margin: 0 auto;
@@ -174,4 +183,43 @@ div > p {
 .count {
 	float: right;
 	margin-top: 3px;
+}
+.sweet-line {
+	margin-top: 20px;
+	display: block;
+	overflow: auto;
+}
+.sweet-line > button {
+	float: right;
+	padding: 5px 10px;
+	border-radius: 5px;
+	border-style: none;
+	margin: 0px 5px;
+	background-color: white;
+}
+.food-line {
+	margin-top: 20px;
+	display: block;
+	overflow: auto;
+}
+.food-line > button {
+	float: right;
+	padding: 5px 10px;
+	border-radius: 5px;
+	border-style: none;
+	margin: 0px 5px;
+	background-color: white;
+}
+.drink-line {
+	margin-top: 20px;
+	display: block;
+	overflow: auto;
+}
+.drink-line > button {
+	float: right;
+	padding: 5px 10px;
+	border-radius: 5px;
+	border-style: none;
+	margin: 0px 5px;
+	background-color: white;
 }
