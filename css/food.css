@@ -162,9 +162,10 @@ header {
   font-size: 1.8em;
 }
 div > p {
-	font-size: 17px;
+	font-size: 0.7em;
 	float: left;
 }
+
 .espresso-line {
 	margin-top: 20px;
 	display: block;
