@@ -111,7 +111,7 @@ header {
 }
 .lower-header {
   overflow: auto;
-  margin-top: 35px;
+  margin-top: 4vh;
 }
 .items {
   float: left;
