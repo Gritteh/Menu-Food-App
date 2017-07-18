@@ -30,22 +30,22 @@ $(document).ready(function() {
 
     coffee.animate({
       height: "40vh",
-    }, 500);
+    }, 250);
     sweet.animate({
       height: "15vh",
       top: "55vh",
       paddingTop: "5vh"
-    }, 500);
+    }, 250);
     food.animate({
       height: "15vh",
       top: "69vh",
       paddingTop: "5vh"
-    }, 500);
+    }, 250);
     drink.animate({
       height: "15vh",
       top: "83vh",
       paddingTop: "5vh"
-    }, 500);
+    }, 250);
 
     sweetHidden.css("display", "none");
     foodHidden.css("display", "none");
@@ -66,22 +66,22 @@ $(document).ready(function() {
       height: "20vh",
       top: "16vh",
       paddingTop: "8vh"
-    }, 500);
+    }, 250);
     sweet.animate({
       height: "20vh",
       top: "35vh",
       paddingTop: "8vh"
-    }, 500);
+    }, 250);
     food.animate({
       height: "20vh",
       top: "54vh",
       paddingTop: "8vh"
-    }, 500);
+    }, 250);
     drink.animate({
       height: "20vh",
       top: "73vh",
       paddingTop: "8vh"
-    }, 500);
+    }, 250);
 
     hidden.css("display", "none");
     sweetHidden.css("display", "none");
@@ -138,22 +138,22 @@ sweet.click(function() {
     height: "40vh",
     top: "30vh"
 
-  }, 500);
+  }, 250);
   coffee.animate({
     height: "15vh",
     paddingTop: "6vh"
-  }, 500);
+  }, 250);
   sweetCount = 1;
   food.animate({
     height: "15vh",
     top: "69vh",
     paddingTop: "6vh"
-  }, 500);
+  }, 250);
   drink.animate({
     height: "15vh",
     top: "83vh",
     paddingTop: "6vh"
-  }, 500);
+  }, 250);
   hidden.css("display", "none");
   sweetDone.css("display", "inline");
   foodHidden.css("display", "none");
@@ -214,22 +214,22 @@ food.click(function() {
   food.animate({
     height: "40vh",
     top: "44vh"
-  }, 500);
+  }, 250);
   coffee.animate({
     height: "15vh",
     paddingTop: "6vh"
-  }, 500);
+  }, 250);
 
   sweet.animate({
     height: "15vh",
     top: "30vh",
     paddingTop: "6vh"
-  }, 500);
+  }, 250);
   drink.animate({
     height: "15vh",
     top: "83vh",
     paddingTop: "6vh"
-  }, 500);
+  }, 250);
   // var foodDone = $(".food-hidden");
   // var foodLine = $(".food-line");
   hidden.css("display", "none");
@@ -288,22 +288,22 @@ drink.click(function() {
   coffee.animate({
     height: "15vh",
     paddingTop: "6vh"
-  }, 500);
+  }, 250);
 
   sweet.animate({
     height: "15vh",
     top: "30vh",
     paddingTop: "6vh"
-  }, 500);
+  }, 250);
   food.animate({
     height: "15vh",
     top: "44vh",
     paddingTop: "6vh"
-  }, 500);
+  }, 250);
   drink.animate({
     height: "40vh",
     top: "58vh"
-  }, 500);
+  }, 250);
   hidden.css("display", "none");
   sweetHidden.css("display", "none");
   foodHidden.css("display", "none");
